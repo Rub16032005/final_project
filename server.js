@@ -183,16 +183,20 @@ function game() {
 
 // setInterval(
 function time() {
-    for (let k = 0; k < 600; k++) {
+    for (let k = 0; k >= 0; k++) {
         //summer
         if ((k > 2) && (k < 5)) {
             return setInterval(game, 500)
         }
         //winter
-        if (k > 5) {
+        else if ((k > 5) && (k < 10)) {
             return setInterval(game, 1000)
         }
-        //spring-autumn
+        //autumn
+        else if (k > 10) {
+            return setInterval(game, 2000)
+        }
+        //spring
         else {
           return  setInterval(game, 8000);
         }
